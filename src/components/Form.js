@@ -4,34 +4,46 @@ import '../css/FormStyle.css';
 class Form extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            value: "",
+                }
         
 
 
-        //this.handleChange = this.handleChange.bind(this);
-        //this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+      handleSubmit(event) {
+        alert('Thank you for your request : ' + this.state.value);
+        event.preventDefault();
+      }
+
 
     render() {
         //(this.state.form)
         return (
-            <div>
+            <div className="Modal">
 
-                <form className="form">
-                    <div className="container">
-                    <label className="labels">Full Name</label> 
-                    <input className="input" id="name" placeholder="Emily Smith" /> 
+                <form className="form" onSubmit={this.handleSubmit}>
+                    <div className="modal"> 
+                    <label className="name">Full Name </label> 
+                    <input type="text" id="name" className="input" value={this.state.name} onChange={this.handleChange} placeholder="Emily Smith" /> 
                     
                     </div>
                     <div className="container"> 
-                    <label className="labels">Email  </label>              
-                    <input className="input" id="email" placeholder="Emily@gmail.com"/>
+                    <label className="email">Email </label>              
+                    <input className="input" id="email" value={this.state.email} onChange={this.handleChange} placeholder="Emily@gmail.com"/>
                    
                     </div>
                     <div>
-                    <label className="labels">
+                    <label className="info">
                         Info Request:                    
                     </label>
-                    <textarea id="info" placeholder="Extra info about Study Abroad program in Greece" />
+                    <textarea className="textarea" id="info" value={this.state.info} onChange={this.handleChange} placeholder="Info: Study Abroad in Greece" />
                     
                     </div>
                     
