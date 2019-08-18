@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/FormStyle.css';
 
 class Form extends React.Component {
     constructor(props) {
@@ -17,23 +18,25 @@ class Form extends React.Component {
 
                 <form className="form">
                     <div className="container">
-                    <input className="input" id="name" placeholder="Emily Smith" /> 
                     <label className="labels">Full Name</label> 
+                    <input className="input" id="name" placeholder="Emily Smith" /> 
+                    
                     </div>
-                    <div className="container">               
+                    <div className="container"> 
+                    <label className="labels">Email  </label>              
                     <input className="input" id="email" placeholder="Emily@gmail.com"/>
-                    <label className="labels">Email  </label>
+                   
                     </div>
                     <div>
-                    <textarea id="info" placeholder="Extra info about Study Abroad program in Greece" />
                     <label className="labels">
-                        Info Request:
-                    
+                        Info Request:                    
                     </label>
+                    <textarea id="info" placeholder="Extra info about Study Abroad program in Greece" />
+                    
                     </div>
                     
                     
-                    <button><input type="submit" value="Submit" /></button>
+                    <button className="btn" type="submit" value="Submit">Submit</button>
                 </form>
 
 
