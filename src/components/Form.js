@@ -30,17 +30,22 @@ class Form extends React.Component {
 
                 <form className="form" onSubmit={this.handleSubmit}>
                     <div className="modal"> 
-                    <label className="name">Full Name </label> 
-                    <input type="text" id="name" className="input" value={this.state.name} onChange={this.handleChange} placeholder="Emily Smith" /> 
+                    <label className="labels">Full Name </label> 
+                    <input type="input" id="name" className="input" value={this.state.name} onChange={this.handleChange} placeholder="Emily Smith" /> 
                     
                     </div>
                     <div className="container"> 
-                    <label className="email">Email </label>              
+                    <label className="labels">Prefered Email </label>              
                     <input className="input" id="email" value={this.state.email} onChange={this.handleChange} placeholder="Emily@gmail.com"/>
                    
                     </div>
+                    <div className="container"> 
+                    <label className="labels">College </label>              
+                    <input className="input" id="email" value={this.state.college} onChange={this.handleChange} placeholder="Lehman College"/>
+                   
+                    </div>
                     <div>
-                    <label className="info">
+                    <label className="labels">
                         Info Request:                    
                     </label>
                     <textarea className="textarea" id="info" value={this.state.info} onChange={this.handleChange} placeholder="Info: Study Abroad in Greece" />
