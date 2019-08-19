@@ -6,18 +6,25 @@
 }
     
 .input{
-    width: 75%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    
 
 }
 
+.labdels{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
 .textarea{
-    width: 75%;
+    width: 80%;
     padding: 16px 28px;
     margin: 8px 0;
     display: inline-block;
@@ -45,7 +52,7 @@
 	border-radius: 2px;
 	padding: 10px;
     width: 300px;
-    height: 350px;
+    height: 445px;
     align-content: center;
     align-items: center;
     font-display: center;
